@@ -1,0 +1,9 @@
+type userId = nat32;
+type user = record {name: text;};
+service : {
+  /// * High-Level API
+  create: (user) -> (userId);
+  delete: (userId) -> (bool);
+  read: (userId) -> (opt user) query;
+  update: (userId, user) -> (bool);
+}

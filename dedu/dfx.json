@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "dedu_backend": {
+      "main": "src/dedu_backend/main.mo",
+      "type": "motoko"
+    },
+    "dedu_frontend": {
+      "dependencies": [
+        "dedu_backend"
+      ],
+      "source": [
+        "src/dedu_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "dedu_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
